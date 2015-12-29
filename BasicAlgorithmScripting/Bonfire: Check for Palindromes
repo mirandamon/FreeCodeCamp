@@ -1,0 +1,22 @@
+function palindrome(str) {
+  // Good luck!
+  str = str.toLowerCase();
+  str = str.replace(/[\W_]+/g, '');
+  var array1 = str.split("");
+  var array2 = str.split("");
+  array1 = array1.reverse();
+  for (var i = 0; i < array1.length; i++){
+    if (array1[i] == array2[i]){
+      continue;
+    }
+    else {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+
+palindrome("nope");
+
